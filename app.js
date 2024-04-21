@@ -216,3 +216,13 @@ btn.addEventListener("click", async () => {
   amtval = 1;
   amt.value = "1";
 })
+let icon = document.querySelector("i");
+icon.addEventListener("click",()=>{
+  let leftval = document.querySelector(".from select");
+  let rightval = document.querySelector(".to select");
+  let nw = leftval.value;
+  leftval.value = rightval.value;
+  rightval.value = nw;
+  changeflag(leftval);
+  changeflag(rightval);
+})
